@@ -99,10 +99,12 @@ print_lowest_grade_level_speakers
 
 
 # REFLECTION- Include your reflection as a comment below.
-# How does the sqlite3 gem work?  What is the variable `$db` holding?  
-# Try to use your knowledge of ruby and OO to decipher this as well as h
-# ow the `#execute` method works.  Take a stab at explaining the line 
-# `$db.execute("SELECT name FROM congress_members WHERE years_in_congress 
-#   > #{minimum_years}")`.  Try to explain this as clearly as possible for 
-# your fellow students.  
+# How does the sqlite3 gem work?  ---> it allows you to run sqlite3 within Ruby. 
+# First: require 'sqlite3'
+# Then, define the Database: $db = SQLite3::Database (now we know what program and database type we are using)
+# What is the variable `$db` holding?  ---> The database.
+# Try to use your knowledge of ruby and OO to decipher this as well as how the `#execute` method works.  --> It's like when you e.g. #{|i| i + whatever} inside a sting, except in this case, you're saying "execute everything inside the brackets... which I'm going to throw to you in the form of a string"
+# Take a stab at explaining the line `$db.execute("SELECT name FROM congress_members WHERE years_in_congress > #{minimum_years}"). ---> $db. says we're using a database, execute says "go!(execute everything in here)""... then, select column from database whatever, filtering by an argument which says "we'll take any integer above this one please". (the argument is defined when you call the method, so if set up your methods nicely, they'll be userfriendly for the high-level calls by manipulating the arguments, and never entering SQLite heavy syntax)
+
+#Try to explain this as clearly as possible for your fellow students.  
 # If you're having trouble, find someone to pair on this explanation with you.
