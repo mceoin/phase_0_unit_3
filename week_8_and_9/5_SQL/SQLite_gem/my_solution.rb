@@ -14,13 +14,15 @@ def print_arizona_reps
   az_reps.each { |rep| puts rep }
 end
 
-def print_longest_serving_reps(minimum_years)  #sorry guys, oracle needs me, i didn't finish this!
+def print_longest_serving_reps(minimum_years)  #sorry guys, oracle needs me, i didn't finish this! <--- all good, I came to the rescue!
   puts "LONGEST SERVING REPRESENTATIVES"
-  puts $db.execute("SELECT name FROM congress_members WHERE years_in_congress > #{minimum_years}")
+  longest_reps = $db.execute("SELECT name, years_in_congress FROM congress_members WHERE years_in_congress > #{minimum_years}")
+  longest_reps.each { |name, years_in_congress| puts name + " - " + years_in_congress.to_s + " years"}
 end
 
 def print_lowest_grade_level_speakers
   puts "LOWEST GRADE LEVEL SPEAKERS (less than < 8th grade)"
+  puts $db.execute("SELECT name FROM congress_members WHERE grade_current < 8")
 end
 
 def print_separator
@@ -37,6 +39,7 @@ print_separator
 print_longest_serving_reps(35)
 # TODO - Print out the number of years served as well as the name of the longest running reps
 # output should look like:  Rep. C. W. Bill Young - 41 years
+# Done by Eoin, not that oracle slacker!
 
 print_separator
 print_lowest_grade_level_speakers 
