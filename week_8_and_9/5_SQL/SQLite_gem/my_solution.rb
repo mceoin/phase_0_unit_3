@@ -31,9 +31,44 @@ def print_separator
   puts 
 end
 
+def print_newjersey_reps
+  puts "NJ REPRESENTATIVES"
+  nj_reps = $db.execute("SELECT name FROM congress_members WHERE location = 'NJ'")
+  nj_reps.each { |rep| puts rep }
+end
+
+def print_newyork_reps
+  puts "NY REPRESENTATIVES"
+  ny_reps = $db.execute("SELECT name FROM congress_members WHERE location = 'NY'")
+  ny_reps.each { |rep| puts rep }
+end
+
+def print_florida_reps
+  puts "FL REPRESENTATIVES"
+  fl_reps = $db.execute("SELECT name FROM congress_members WHERE location = 'FL'")
+  fl_reps.each { |rep| puts rep }
+end
+
+def print_maine_reps
+  puts "MN REPRESENTATIVES"
+  mn_reps = $db.execute("SELECT name FROM congress_members WHERE location = 'MN'")
+  mn_reps.each { |rep| puts rep }
+end
+
 
 print_arizona_reps
+print_separator
 
+print_newyork_reps
+print_separator
+
+print_newjersey_reps
+print_separator
+
+print_florida_reps
+print_separator
+
+print_maine_reps
 print_separator
 
 print_longest_serving_reps(35)
@@ -47,6 +82,7 @@ print_lowest_grade_level_speakers
 
 # TODO - Make a method to print the following states representatives as well:
 # (New Jersey, New York, Maine, Florida, and Alaska)
+#done done done
 
 
 ##### BONUS #######
