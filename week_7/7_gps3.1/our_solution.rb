@@ -39,9 +39,9 @@ class ShoppingList
     end
 
     def remove(item, qty)
-   	quantity = @list[item]
-    new_quantity = quantity - qty
-    @list[item]=new_quantity
+	   	quantity = @list[item]
+	    new_quantity = quantity - qty
+	    @list[item]=new_quantity
     end
 
     def print_list
@@ -60,7 +60,7 @@ end
     grocery_list.add("tomato", 7)
     grocery_list.add("cherry", 100)
     grocery_list.add("pie", 6)
-	
+    	
 	grocery_list.print_list
 
 #check for "string" key value in our grocery_list
