@@ -60,7 +60,7 @@ end
     grocery_list.add("tomato", 7)
     grocery_list.add("cherry", 100)
     grocery_list.add("pie", 6)
-    	
+
 	grocery_list.print_list
 
 #check for "string" key value in our grocery_list
@@ -72,7 +72,11 @@ end
 # With your partner, review the code. Is it DRY? Are the names good?
 
 # Release 5: Reflect
-# Copy your code from stypi into the our_solution.rb file. Then complete a reflection in the designated section.
+# spent the better part of 15minutes trying to figure out why otherwise-working code wasn't working (capital letters are needed at the beginning o fa class)
+# Emily was great - very encouraging, even when I ran into holes, and also keeping me on the more difficult path (using hashes to create a real shopping list instead of just accepting a single argument) - in reality, more experience with hashes and hindsight will show this wasn't a hard problem, but with better understanding of syntax should move pretty swiftly.
+# Also, Emily made time to do this GPS so I could fit it in, so big thanks for that.
+# you can't sort a hash by max value, unfortunately (as far as I can tell). The option available is to run a loop and reorganize it elsewhere.
+# switching from Javascript to Ruby is tough. I need to create a cheat-sheet or pattern to repeat to remind myself of syntax quickly. Like a loop to ge tup to speed.
 
 # Release 6: Sync your changes to Github!
 # Release 6: Submit Feedback.
