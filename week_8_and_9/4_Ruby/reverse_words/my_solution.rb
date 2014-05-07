@@ -34,7 +34,9 @@ sentence = "I ate my sandwich."
 assert { reverse_words(sentence) == "I eta ym .hciwdnas" }
 
 sentence = "rotavator"
-assert { reverse_words(sentence) == "rotavator".
+assert { reverse_words(sentence) == "rotavator" }
 
 
 # 5. Reflection 
+
+# This split / map / reverse method didn't keep punctuation in the same place, or reorder the words (just the letters within the words) - doing that would have required more work.

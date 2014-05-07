@@ -66,8 +66,7 @@ assert { Rectangle.new(2,3).diagonal == Math.sqrt(13)}
 assert { Rectangle.new(2,3).perimeter == 10}
 assert { Rectangle.new(2,3).square? == false}
 
+# # 5. Reflection 
+# Pretty straight forward. Haven't used Math in a while. 
 
-
-
-
-# 5. Reflection 
+# Adam was great to pair with - we stuck to Driver/Navigator dichotomy
