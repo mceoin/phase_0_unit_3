@@ -1,15 +1,18 @@
-/*
-U3.W8-9: Gradebook from Names and Scores
 
-You will work with the following two variables.  The first, students, holds the names of four students.  
-The second, scores, holds groups of test scores.  The relative positions of elements within the two 
-variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
+// U3.W8-9: Gradebook from Names and Scores
 
-Do not alter the students and scores code.
+// You will work with the following two variables.  The first, students, holds the names of four students.  
+// The second, scores, holds groups of test scores.  The relative positions of elements within the two 
+// variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
 
-I worked on this challenge [by myself, with:]
+// Do not alter the students and scores code.
 
-*/
+// I worked on this challenge [by myself, with: Sebastian]
+
+
+// __________________________________________
+// Write your code below.
+
 
 var students = ["Joseph", "Susan", "William", "Elizabeth"]
 
@@ -18,14 +21,41 @@ var scores = [ [80, 70, 70, 100],
                [75, 70, 80, 75],
                [100, 90, 95, 85] ]
 
+  var average = function(array){
+
+    var sum = 0
+
+    for(i = 0; i < array.length; i++){
+      sum = sum + array[i];
+        }  
+      return sum / array.length
+  }
+
+  var gradebook = {
+    Joseph:{testScores:scores[0]},
+    Susan:{testScores:scores[1]},
+    William:{testScores:scores[2]},
+    Elizabeth:{testScores:scores[3]},
+
+      addScore:function(student, addGrade){
+        gradebook[student].testScores.push(addGrade)
+      },
+
+      getAverage:function(student){
+        return average(gradebook[student].testScores)
+      }
+
+  }
 
 
 
+// gradebook.addScore("Susan", 12)
+// console.log(gradebook.Susan)
 
-
-// __________________________________________
-// Write your code below.
-
+// console.log(gradebook)
+// console.log(gradebook.Joseph)
+// console.log(gradebook.Joseph.testScores)
+// console.log(gradebook.Joseph.testScores[3])
 
 
 
@@ -45,7 +75,11 @@ var scores = [ [80, 70, 70, 100],
 // Reflect
 
 
-
+// Ok, this was really hard. Not going to lie. I need to do this a few more times to understand what's going on.
+// Using the ":" in such a way was intense, because you're remembering what it refers to, sometimes at 4 nests deep.
+// ":", in my mind, is like the equivalent of var = whatever, execpt your var hasn't yet been defined, and neither has your whatever. They're all conditional upon each other, the whole way up the stack to the original input.
+// when adding multiple functions to a variable, {whatever}, {whatever}, - it's REALLY important to remember the comma after the }
+// an increment loop on an array is i < whatever, not i<= whatever, because the array decrements by 1.
 
 
 
